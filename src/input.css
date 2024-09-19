@@ -8,7 +8,7 @@
         @apply font-poppins overflow-x-hidden;
     }
     .container {
-        @apply max-w-[1600px] mx-auto px-[50px];
+        @apply max-w-[1600px] mx-auto px-[20px] lg:px-[50px];
     }
     h1 {
         @apply text-7xl;
@@ -34,7 +34,23 @@
 }
 
 @layer components {
+    .gallery__wrapper {
+        @apply flex flex-wrap gap-4;
+    }
+
+    .gallery__card {
+        @apply grid w-full relative;
+    }
+
+    .gallery__card img {
+        @apply h-[300px];
+    }
+
+    .gallery__text {
+        @apply absolute bottom-0;
+    }
 }
 
 @layer utilities {
+
 }
