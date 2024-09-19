@@ -2,8 +2,15 @@
 module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: "Poppins",
+      },
+      colors: {
+        primary: "#BB141B",
+        secondary: "#F0F0F0",
+      },
+    },
   },
   plugins: [],
 };
-
