@@ -1,12 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+    body {
+        @apply font-poppins overflow-x-hidden;
+    }
+    .container {
+        @apply max-w-[1600px] mx-auto lg:px-[50px] px-[20px];
+    }
+    h1 {
+        @apply text-6xl lg:text-7xl font-bold;
+    }
+    h2 {
+        @apply lg:text-5xl text-3xl font-bold;
+    }
+    h3 {
+        @apply lg:text-4xl text-lg font-semibold;
+    }
+    h4 {
+        @apply lg:text-2xl text-base;
+    }
+    h5 {
+        @apply lg:text-lg text-sm;
+    }
+    h6 {
+        @apply text-xs;
+    }
+    p {
+        @apply lg:text-base text-[11px];
+    }
+
+    header {
+        @apply absolute w-full;
+    }
+
+    .header__logo img {
+        @apply h-[63px] w-[212px] ;
+    }
+
+    .header__nav {
+        @apply fixed top-[63px] right-[-100%] w-[15rem]  py-10 flex flex-col text-center h-full bg-white justify-center gap-10 ease-in duration-700;
+    }
+
+    .header__nav li {
+        @apply hover:underline;
+    }
+
+    .header__nav.open {
+        @apply right-0 z-10 overflow-y-hidden;
+    }
+
+    .toggle__menu {
+        @apply flex flex-col gap-1 ease-in duration-700;
+    }
+
+    .toggle__menu.open span:first-child {
+        @apply rotate-[-140deg] translate-y-2;
+    }
+
+  .toggle__menu.open span:last-child {
+        @apply rotate-[140deg];
+    }
+
+    .toggle__menu span {
+        @apply content-[""] bg-white w-8 h-1 ease-in-out duration-700;
+    }
+
+    /* ABOUT PAGE */
+    .aboutintro h3::after, .aboutintro h3::before{
+        @apply content-[""] inline-block relative w-[5rem] h-0.5 bg-black mb-1;
+    }
+
+    .aboutintro h3::before {
+        @apply right-1;
+    }
+
+    .aboutintro h3::after {
+        @apply left-1;
+    }
+    
+    .aboutdream__text h6::before {
+        @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
+    }
+    
+
+
 }
 
 @layer components {
 }
 
 @layer utilities {
+    .banner {
+        @apply bg-no-repeat h-[280px] w-full bg-cover;
+    }
 }
