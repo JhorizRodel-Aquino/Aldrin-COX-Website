@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-icons
-node_modules
-package-lock.json
-package.json
-img
-=======
-node_modules
-icons
-img
-package-lock.json
-package.json
->>>>>>> 32b0a562f0ad2af14dee15558917ce26bdd0367c
+node_modules/
+icons/
+img/
+package-lock.json~
+package.json~
