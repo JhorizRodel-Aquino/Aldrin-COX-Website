@@ -4,53 +4,152 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply font-poppins overflow-x-hidden;
-    }
-    .container {
-        @apply max-w-[1600px] mx-auto px-[20px] lg:px-[50px];
-    }
-    h1 {
-        @apply text-7xl;
-    }
-    h2 {
-        @apply text-5xl;
-    }
-    h3 {
-        @apply text-4xl;
-    }
-    h4 {
-        @apply text-2xl;
-    }
-    h5 {
-        @apply text-lg;
-    }
-    h6 {
-        @apply text-xs;
-    }
-    p {
-        @apply text-base;
-    }
+  body {
+    @apply font-poppins overflow-x-hidden;
+  }
+  .container {
+    @apply w-full mx-auto lg:px-[50px] px-[20px];
+  }
+  h1 {
+    @apply text-6xl lg:text-7xl font-bold;
+  }
+  h2 {
+    @apply lg:text-5xl text-3xl font-bold;
+  }
+  h3 {
+    @apply lg:text-4xl text-lg font-semibold;
+  }
+  h4 {
+    @apply lg:text-2xl text-base;
+  }
+  h5 {
+    @apply lg:text-lg text-sm;
+  }
+  h6 {
+    @apply text-xs;
+  }
+  p {
+    @apply lg:text-base text-[11px];
+  }
+
+  header {
+    @apply absolute w-full;
+  }
+
+  .header__logo img {
+    @apply h-[63px] w-[212px];
+  }
+
+  .header__nav {
+    @apply fixed top-[63px] right-[-100%] w-[15rem]  py-10 flex flex-col text-center h-full bg-white justify-center gap-10 ease-in duration-500 z-10;
+  }
+
+  .header__nav li {
+    @apply hover:underline;
+  }
+
+  .header__nav.open {
+    @apply right-0 overflow-y-hidden;
+  }
+
+  .toggle__menu {
+    @apply flex flex-col gap-1 ease-in duration-500;
+  }
+
+  .toggle__menu.open span:first-child {
+    @apply rotate-[-140deg] translate-y-2;
+  }
+
+  .toggle__menu.open span:last-child {
+    @apply rotate-[140deg];
+  }
+
+  .toggle__menu span {
+    @apply content-[""] bg-white w-8 h-1 ease-in-out duration-500;
+  }
+
+  /* ABOUT PAGE */
+  .aboutintro h3::after,
+  .aboutintro h3::before {
+    @apply content-[""] inline-block relative w-[5rem] h-0.5 bg-black mb-1;
+  }
+
+  .aboutintro h3::before {
+    @apply right-1;
+  }
+
+  .aboutintro h3::after {
+    @apply left-1;
+  }
+
+  .aboutdream__text h6::before {
+    @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
+  }
 }
 
 @layer components {
-    .gallery__wrapper {
-        @apply flex flex-wrap gap-4;
-    }
+  .gallery__wrapper {
+    @apply grid lg:grid-cols-3 gap-8 justify-center  lg:gap-4 px-[5%] md:grid-cols-2;
+  }
 
-    .gallery__card {
-        @apply grid w-full relative;
-    }
+  .gallery__card {
+    @apply grid grid-rows-[auto_auto] justify-items-start items-center relative shadow-[-5px_5px_15px_4px_rgb(0_0_0_/_0.25)] p-4 gap-2 lg:shadow-none lg:p-0 overflow-clip lg:grid-rows-1;
+  }
 
-    .gallery__card img {
-        @apply h-[300px];
-    }
+  .gallery__card:hover .gallery__text {
+    @apply lg:opacity-100;
+  }
+  .gallery__card:hover span {
+    @apply lg:w-full;
+  }
 
-    .gallery__text {
-        @apply absolute bottom-0;
-    }
+  .gallery__card span {
+    @apply lg:h-full lg:w-0 lg:bg-black/20 lg:absolute lg:block lg:left-0 duration-300 hidden;
+  }
+
+  .gallery__card img {
+    @apply object-cover h-full w-full lg:w-full lg:h-full;
+  }
+
+  .gallery__text {
+    @apply lg:text-white lg:absolute lg:bottom-5 left-5 lg:opacity-0 duration-300 z-10;
+  }
+
+  .footer__menu li {
+    @apply lg:text-base text-[11px];
+  }
 }
 
 @layer utilities {
+  .banner {
+    @apply bg-no-repeat h-[280px] w-full bg-cover bg-center lg:h-[583px] shadow-xl;
+  }
 
+  .btn {
+    @apply lg:px-9 px-6 lg:py-3 py-2 border-[3px] text-sm lg:text-lg text-white rounded-lg shadow-[-3px_5px_9px_0_rgb(0_0_0_/_0.75)] justify-self-center;
+  }
+
+  .btn.bg-prmry {
+    @apply border-primary bg-primary hover:bg-transparent duration-300 hover:text-shadow;
+  }
+
+  .text-shadow {
+    @apply [text-shadow:_-3px_5px_9px_rgb(0_0_0_/_100%)];
+  }
+
+  .homeBanner__slider img {
+    @apply object-cover h-full w-full absolute;
+  }
+
+  .homeBanner__slider::before {
+    @apply content-[''] w-full h-full absolute top-0 bg-black/30 z-10;
+  }
+
+  .moveIn {
+    @apply animate-moveIn z-[4];
+  }
+
+  .fadeIn {
+    @apply animate-fadeIn;
+  }
 }

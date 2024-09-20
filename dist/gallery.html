@@ -8,8 +8,44 @@
   </head>
 
   <body>
-    <section class="gallery py-16">
+    <!-- HEADER -->
+    <header class="header z-40">
       <div class="container">
+        <div class="header__wrapper flex justify-between items-center">
+          <div class="header__logo">
+            <a href="./index.html"><img src="../img/Logo.png" alt="" /></a>
+          </div>
+          <nav>
+            <ul class="header__nav">
+              <li><a href="./about.html">ABOUT</a></li>
+              <li><a href="./services.html">SERVICES</a></li>
+              <li><a href="./gallery.html">GALLERY</a></li>
+              <li><a href="./faqs.html">FAQs</a></li>
+              <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+          </nav>
+
+          <div class="toggle__menu">
+            <span class=""></span>
+            <span class=""></span>
+          </div>
+        </div>
+        <div class="backdrop"></div>
+      </div>
+    </header>
+
+    <!-- BANNER -->
+    <div class="banner bg-[url('../img/banner_gallery.png')] bg-center">
+      <div class="container">
+        <div class="banner__wrapper">
+          <h2 class="pt-[9rem] text-center text-white">About Us</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <section class="gallery py-14">
+
         <div class="gallery__wrapper">
           <div class="gallery__card">
             <img src="../img/gallery1.png" alt="" />
@@ -17,6 +53,7 @@
               <h3>Canada</h3>
               <p>5/22/2024</p>
             </div>
+            <span></span>
           </div>
           <div class="gallery__card">
             <img src="../img/gallery1.png" alt="" />
@@ -24,6 +61,23 @@
               <h3>Canada</h3>
               <p>5/22/2024</p>
             </div>
+            <span></span>
+          </div>
+          <div class="gallery__card">
+            <img src="../img/CTA.png" alt="" />
+            <div class="gallery__text">
+              <h3>Canada</h3>
+              <p>5/22/2024</p>
+            </div>
+            <span></span>
+          </div>
+          <div class="gallery__card">
+            <img src="../img/banner1.png" alt="" />
+            <div class="gallery__text">
+              <h3>Canada</h3>
+              <p>5/22/2024</p>
+            </div>
+            <span></span>
           </div>
           <div class="gallery__card">
             <img src="../img/gallery1.png" alt="" />
@@ -31,6 +85,7 @@
               <h3>Canada</h3>
               <p>5/22/2024</p>
             </div>
+            <span></span>
           </div>
           <div class="gallery__card">
             <img src="../img/gallery1.png" alt="" />
@@ -38,15 +93,17 @@
               <h3>Canada</h3>
               <p>5/22/2024</p>
             </div>
+            <span></span>
           </div>
         </div>
-      </div>
+
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer bg-black text-white text-center py-12">
       <div class="container">
         <div
-          class="footer__wrapper flex flex-col-reverse max-w-[250px] mx-auto gap-12"
+          class="footer__wrapper flex flex-col-reverse max-w-[250px] mx-auto gap-12 items-center lg:flex-row lg:justify-between lg:max-w-full lg:gap-0"
         >
           <div
             class="footer__credits grid justify-items-center items-center gap-5"
@@ -134,8 +191,8 @@
               />
             </svg>
 
-            <address class="not-italic">
-              Golden Gate Brg, San Francisco, CA, United States
+            <address class="not-italic lg:text-base text-[11px]">
+              Golden Gate Brg, San Francisco, <br> CA, United States
             </address>
           </div>
 
@@ -149,5 +206,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- SCRIPT -->
+    <script src="./js/toggle__menu.js"></script>
   </body>
 </html>
