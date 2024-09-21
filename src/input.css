@@ -69,39 +69,7 @@
         @apply content-[""] bg-white w-8 h-1 ease-in-out duration-700 z-20;
     }
 
-    /* ABOUT PAGE */
-    .aboutintro h3::after, .aboutintro h3::before{
-        @apply content-[""] inline-block relative w-[5rem] h-0.5 bg-black mb-1 lg:w-[15rem] lg:mb-2;
-    }
-
-    .aboutintro h3::before {
-        @apply right-1;
-    }
-
-    .aboutintro h3::after {
-        @apply left-1;
-    }
-    
-    .aboutdream__text h6::before {
-        @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
-    }
-
-    /* .abouttravel img {
-        @apply w-[30px] lg:w-[50px];
-    } */
-    
-
-  .aboutintro h3::after {
-    @apply left-1;
-  }
-
-  .aboutdream__text h6::before {
-    @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
-  }
-}
-
-@layer components {
-  /* HOME PAGE */
+    /* HOME PAGE */
   .homeBanner__slider img {
     @apply object-cover h-full w-full absolute;
   }
@@ -149,12 +117,52 @@
   .footer__menu li {
     @apply lg:text-base text-[11px];
   }
+
+    /* ABOUT PAGE */
+
+
+    
+    .aboutdream__text h6::before {
+        @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
+    }
+
+    /* .abouttravel img {
+        @apply w-[30px] lg:w-[50px];
+    } */
+    
+
+  .aboutintro h3::after {
+    @apply left-1;
+  }
+
+  .aboutdream__text h6::before {
+    @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
+  }
 }
 
-@layer utilities {
-  .banner {
-    @apply bg-no-repeat h-[280px] w-full bg-cover bg-center lg:h-[583px] shadow-xl;
+@layer components {
+ .banner {
+    @apply bg-no-repeat w-full bg-cover bg-center h-[45vh] shadow-xl;
   }
+
+  .banner__wrapper {
+    @apply flex items-center justify-center h-[45vh];
+  }
+
+  .line-text {
+    @apply content-[""];
+  }
+
+  .line-text::before, .line-text::after {
+    @apply content-[""] inline-block relative w-[5rem] h-0.5 bg-black mb-1 lg:w-[15rem] lg:mb-2;
+  }
+  
+  .line-text::before {
+        @apply right-1;
+    }
+ .line-text::after {
+        @apply left-1;
+    }
 
   .btn {
     @apply lg:px-9 px-6 lg:py-3 py-2 border-[3px] text-sm lg:text-lg text-white rounded-lg shadow-[-3px_5px_9px_0_rgb(0_0_0_/_0.75)] justify-self-center;
@@ -162,6 +170,14 @@
 
   .btn.bg-prmry {
     @apply border-primary bg-primary hover:bg-transparent duration-300 hover:text-shadow;
+  }
+
+  
+}
+
+@layer utilities {
+.decorative {
+    @apply font-nautigal font-bold text-center  ;
   }
 
   .text-shadow {

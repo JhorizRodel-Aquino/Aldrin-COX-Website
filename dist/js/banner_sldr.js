@@ -1,5 +1,5 @@
 const bannerImgs = document.querySelectorAll(".homeBanner__slider img");
-const bannerTxt = document.querySelector(".homeBanner__text");
+const bannerTxt = document.querySelector(".homeBanner__wrapper");
 
 // only change this value for each slide duration
 // use a value greater than 2000

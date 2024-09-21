@@ -757,103 +757,6 @@ header{
   content: var(--tw-content);
 }
 
-/* ABOUT PAGE */
-
-.aboutintro h3::after, .aboutintro h3::before{
-  position: relative;
-  margin-bottom: 0.25rem;
-  display: inline-block;
-  height: 0.125rem;
-  width: 5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-content: "";
-  content: var(--tw-content);
-}
-
-@media (min-width: 1024px){
-  .aboutintro h3::after, .aboutintro h3::before{
-    margin-bottom: 0.5rem;
-    width: 15rem;
-  }
-}
-
-.aboutintro h3::before{
-  right: 0.25rem;
-}
-
-.aboutintro h3::after{
-  left: 0.25rem;
-}
-
-.aboutdream__text h6::before{
-  position: relative;
-  right: 0.25rem;
-  margin-bottom: 0.125rem;
-  display: inline-block;
-  height: 1px;
-  width: 9rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-content: "";
-  content: var(--tw-content);
-}
-
-/* .abouttravel img {
-        @apply w-[30px] lg:w-[50px];
-    } */
-
-.aboutintro h3::after{
-  left: 0.25rem;
-}
-
-.aboutdream__text h6::before{
-  position: relative;
-  right: 0.25rem;
-  margin-bottom: 0.125rem;
-  display: inline-block;
-  height: 1px;
-  width: 9rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-content: "";
-  content: var(--tw-content);
-}
-
-.container{
-  width: 100%;
-}
-
-@media (min-width: 640px){
-  .container{
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px){
-  .container{
-    max-width: 1536px;
-  }
-}
-
 /* HOME PAGE */
 
 .homeBanner__slider img{
@@ -1019,6 +922,167 @@ header{
   }
 }
 
+/* ABOUT PAGE */
+
+.aboutdream__text h6::before{
+  position: relative;
+  right: 0.25rem;
+  margin-bottom: 0.125rem;
+  display: inline-block;
+  height: 1px;
+  width: 9rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+/* .abouttravel img {
+        @apply w-[30px] lg:w-[50px];
+    } */
+
+.aboutintro h3::after{
+  left: 0.25rem;
+}
+
+.aboutdream__text h6::before{
+  position: relative;
+  right: 0.25rem;
+  margin-bottom: 0.125rem;
+  display: inline-block;
+  height: 1px;
+  width: 9rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
+.banner{
+  height: 45vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.banner__wrapper{
+  display: flex;
+  height: 45vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-text{
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.line-text::before, .line-text::after{
+  position: relative;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+  height: 0.125rem;
+  width: 5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+@media (min-width: 1024px){
+  .line-text::before, .line-text::after{
+    margin-bottom: 0.5rem;
+    width: 15rem;
+  }
+}
+
+.line-text::before{
+  right: 0.25rem;
+}
+
+.line-text::after{
+  left: 0.25rem;
+}
+
+.btn{
+  justify-self: center;
+  border-radius: 0.5rem;
+  border-width: 3px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: -3px 5px 9px 0 rgb(0 0 0 / 0.75);
+  --tw-shadow-colored: -3px 5px 9px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 1024px){
+  .btn{
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.btn.bg-prmry{
+  --tw-border-opacity: 1;
+  border-color: rgb(187 20 27 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 20 27 / var(--tw-bg-opacity));
+  transition-duration: 300ms;
+}
+
+.btn.bg-prmry:hover{
+  background-color: transparent;
+  text-shadow: -3px 5px 9px rgb(0 0 0 / 100%);
+}
+
 .absolute{
   position: absolute;
 }
@@ -1070,10 +1134,6 @@ header{
 
 .h-\[160px\]{
   height: 160px;
-}
-
-.h-full{
-  height: 100%;
 }
 
 .w-60{
@@ -1205,10 +1265,6 @@ header{
   padding-bottom: 6px;
 }
 
-.pt-\[9rem\]{
-  padding-top: 9rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -1251,62 +1307,10 @@ header{
   opacity: 0;
 }
 
-.banner{
-  height: 280px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media (min-width: 1024px){
-  .banner{
-    height: 583px;
-  }
-}
-
-.btn{
-  justify-self: center;
-  border-radius: 0.5rem;
-  border-width: 3px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-shadow: -3px 5px 9px 0 rgb(0 0 0 / 0.75);
-  --tw-shadow-colored: -3px 5px 9px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media (min-width: 1024px){
-  .btn{
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-.btn.bg-prmry{
-  --tw-border-opacity: 1;
-  border-color: rgb(187 20 27 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(187 20 27 / var(--tw-bg-opacity));
-  transition-duration: 300ms;
-}
-
-.btn.bg-prmry:hover{
-  background-color: transparent;
-  text-shadow: -3px 5px 9px rgb(0 0 0 / 100%);
+.decorative{
+  text-align: center;
+  font-family: "The Nautigal", cursive;
+  font-weight: 700;
 }
 
 .text-shadow{
@@ -1356,12 +1360,12 @@ header{
     gap: 2.5rem;
   }
 
-  .lg\:gap-9{
-    gap: 2.25rem;
-  }
-
   .lg\:gap-3{
     gap: 0.75rem;
+  }
+
+  .lg\:gap-9{
+    gap: 2.25rem;
   }
 
   .lg\:py-\[45px\]{
