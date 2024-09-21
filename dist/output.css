@@ -794,6 +794,61 @@ header{
   }
 }
 
+/* HOME PAGE */
+
+.homeBanner__slider img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.homeBanner__slider::before{
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0 0 0 / 0.3);
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.moveIn{
+  z-index: 4;
+}
+
+@keyframes moveIn{
+  0%{
+    transform: translateY(100%);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.moveIn{
+  animation: moveIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+  0%, 50%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+.fadeIn{
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* GALLERY PAGE */
+
 .gallery__wrapper{
   display: grid;
   justify-content: center;
@@ -912,10 +967,6 @@ header{
   position: relative;
 }
 
-.top-\[20\%\]{
-  top: 20%;
-}
-
 .z-10{
   z-index: 10;
 }
@@ -945,20 +996,16 @@ header{
   display: grid;
 }
 
+.h-\[100dvh\]{
+  height: 100dvh;
+}
+
 .h-\[10rem\]{
   height: 10rem;
 }
 
 .h-\[160px\]{
   height: 160px;
-}
-
-.h-\[70dvh\]{
-  height: 70dvh;
-}
-
-.h-\[100dvh\]{
-  height: 100dvh;
 }
 
 .w-60{
@@ -973,12 +1020,16 @@ header{
   width: 100%;
 }
 
+.max-w-\[100\%\]{
+  max-width: 100%;
+}
+
 .max-w-\[250px\]{
   max-width: 250px;
 }
 
-.max-w-\[85\%\]{
-  max-width: 85%;
+.flex-col{
+  flex-direction: column;
 }
 
 .flex-col-reverse{
@@ -987,6 +1038,10 @@ header{
 
 .items-center{
   align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
 }
 
 .justify-between{
@@ -1017,12 +1072,8 @@ header{
   gap: 1.5rem;
 }
 
-.gap-9{
-  gap: 2.25rem;
-}
-
-.gap-\[10px\]{
-  gap: 10px;
+.gap-7{
+  gap: 1.75rem;
 }
 
 .overflow-clip{
@@ -1032,11 +1083,6 @@ header{
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/banner1\.png\'\)\]{
@@ -1195,66 +1241,7 @@ header{
   text-shadow: -3px 5px 9px rgb(0 0 0 / 100%);
 }
 
-.homeBanner__slider img{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.homeBanner__slider::before{
-  position: absolute;
-  top: 0px;
-  z-index: 10;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(0 0 0 / 0.3);
-  --tw-content: '';
-  content: var(--tw-content);
-}
-
-.moveIn{
-  z-index: 4;
-}
-
-@keyframes moveIn{
-  0%{
-    transform: translateY(100%);
-  }
-
-  100%{
-    transform: translateY(0);
-  }
-}
-
-.moveIn{
-  animation: moveIn 1s ease-in-out;
-}
-
-@keyframes fadeIn{
-  0%, 50%{
-    opacity: 0;
-  }
-
-  100%{
-    opacity: 1;
-  }
-}
-
-.fadeIn{
-  animation: fadeIn 2s ease-in-out;
-}
-
 @media (min-width: 1024px){
-  .lg\:top-\[30\%\]{
-    top: 30%;
-  }
-
-  .lg\:h-\[100dvh\]{
-    height: 100dvh;
-  }
-
   .lg\:max-w-full{
     max-width: 100%;
   }
@@ -1269,6 +1256,14 @@ header{
 
   .lg\:gap-0{
     gap: 0px;
+  }
+
+  .lg\:gap-9{
+    gap: 2.25rem;
+  }
+
+  .lg\:gap-\[10px\]{
+    gap: 10px;
   }
 
   .lg\:text-base{

@@ -88,6 +88,24 @@
 }
 
 @layer components {
+  /* HOME PAGE */
+  .homeBanner__slider img {
+    @apply object-cover h-full w-full absolute;
+  }
+
+  .homeBanner__slider::before {
+    @apply content-[''] w-full h-full absolute top-0 bg-black/30 z-10;
+  }
+
+  .moveIn {
+    @apply animate-moveIn z-[4];
+  }
+
+  .fadeIn {
+    @apply animate-fadeIn;
+  }
+
+  /* GALLERY PAGE */
   .gallery__wrapper {
     @apply grid lg:grid-cols-3 gap-8 justify-center  lg:gap-4 px-[5%] md:grid-cols-2;
   }
@@ -135,21 +153,5 @@
 
   .text-shadow {
     @apply [text-shadow:_-3px_5px_9px_rgb(0_0_0_/_100%)];
-  }
-
-  .homeBanner__slider img {
-    @apply object-cover h-full w-full absolute;
-  }
-
-  .homeBanner__slider::before {
-    @apply content-[''] w-full h-full absolute top-0 bg-black/30 z-10;
-  }
-
-  .moveIn {
-    @apply animate-moveIn z-[4];
-  }
-
-  .fadeIn {
-    @apply animate-fadeIn;
   }
 }
