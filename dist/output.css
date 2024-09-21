@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap');
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -590,15 +592,14 @@ h1{
 }
 
 h2{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   font-weight: 700;
 }
 
 @media (min-width: 1024px){
   h2{
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 95px;
   }
 }
 
@@ -665,10 +666,18 @@ header{
   width: 212px;
 }
 
+@media (min-width: 1024px){
+  .header__logo img{
+    height: 86px;
+    width: 290px;
+  }
+}
+
 .header__nav{
   position: fixed;
-  top: 63px;
+  top: 0;
   right: -100%;
+  z-index: 10;
   display: flex;
   height: 100%;
   width: 15rem;
@@ -684,13 +693,25 @@ header{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+@media (min-width: 1024px){
+  .header__nav{
+    position: relative;
+    right: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: transparent;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
 .header__nav li:hover{
   text-decoration-line: underline;
 }
 
 .header__nav.open{
   right: 0px;
-  z-index: 10;
   overflow-y: hidden;
 }
 
@@ -702,18 +723,29 @@ header{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+@media (min-width: 1024px){
+  .toggle__menu{
+    display: none;
+  }
+}
+
 .toggle__menu.open span:first-child{
   --tw-translate-y: 0.5rem;
   --tw-rotate: -140deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .toggle__menu.open span:last-child{
   --tw-rotate: 140deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .toggle__menu span{
+  z-index: 20;
   height: 0.25rem;
   width: 2rem;
   --tw-bg-opacity: 1;
@@ -738,6 +770,13 @@ header{
   content: var(--tw-content);
 }
 
+@media (min-width: 1024px){
+  .aboutintro h3::after, .aboutintro h3::before{
+    margin-bottom: 0.5rem;
+    width: 15rem;
+  }
+}
+
 .aboutintro h3::before{
   right: 0.25rem;
 }
@@ -758,6 +797,10 @@ header{
   --tw-content: "";
   content: var(--tw-content);
 }
+
+/* .abouttravel img {
+        @apply w-[30px] lg:w-[50px];
+    } */
 
 .container{
   width: 100%;
@@ -793,12 +836,21 @@ header{
   }
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .flex{
   display: flex;
 }
 
 .grid{
   display: grid;
+}
+
+.hidden{
+  display: none;
 }
 
 .h-\[10rem\]{
@@ -809,12 +861,24 @@ header{
   height: 160px;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .w-full{
   width: 100%;
 }
 
+.grid-cols-\[repeat\(auto-fit\2c minmax\(1px\2c 35px\)\)\]{
+  grid-template-columns: repeat(auto-fit,minmax(1px,35px));
+}
+
 .items-center{
   align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
 }
 
 .justify-between{
@@ -825,6 +889,15 @@ header{
   gap: 0.75rem;
 }
 
+.gap-6{
+  gap: 1.5rem;
+}
+
+.bg-secondary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 240 240 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\.\/img\/banner1\.png\'\)\]{
   background-image: url('../img/banner1.png');
 }
@@ -833,50 +906,9 @@ header{
   background-size: cover;
 }
 
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.py-\[10px\]{
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.pr-\[6rem\]{
-  padding-right: 6rem;
-}
-
-.pt-\[9rem\]{
-  padding-top: 9rem;
-}
-
-.pb-10{
-  padding-bottom: 2.5rem;
-}
-
-.pb-8{
-  padding-bottom: 2rem;
 }
 
 .pb-6{
@@ -887,18 +919,12 @@ header{
   text-align: center;
 }
 
-.text-end{
-  text-align: end;
+.font-nautigal{
+  font-family: "The Nautigal", cursive;
 }
 
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
+.font-bold{
+  font-weight: 700;
 }
 
 .font-semibold{
@@ -927,7 +953,44 @@ header{
 }
 
 @media (min-width: 1024px){
+  .banner{
+    height: 55vh;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:block{
+    display: block;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:block{
+    display: block;
+  }
+
+  .lg\:h-\[15rem\]{
+    height: 15rem;
+  }
+
+  .lg\:w-\[1062px\]{
+    width: 1062px;
+  }
+
+  .lg\:grid-cols-\[repeat\(auto-fit\2c minmax\(1px\2c 50px\)\)\]{
+    grid-template-columns: repeat(auto-fit,minmax(1px,50px));
+  }
+
   .lg\:justify-between{
     justify-content: space-between;
+  }
+
+  .lg\:gap-10{
+    gap: 2.5rem;
+  }
+
+  .lg\:py-\[45px\]{
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 }
