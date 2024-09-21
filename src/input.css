@@ -15,7 +15,7 @@
         @apply text-6xl lg:text-7xl font-bold;
     }
     h2 {
-        @apply lg:text-[95px] lg:leading-[95px] text-4xl font-bold;
+        @apply lg:text-[95px] lg:leading-[95px] md:text-[40px] md:leading-[50px] text-4xl font-bold;
     }
     h3 {
         @apply lg:text-4xl text-lg font-semibold;
@@ -122,7 +122,7 @@
 
 
     
-    .aboutdream__text h6::before {
+    .aboutDream__text h6::before {
         @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
     }
 
@@ -131,13 +131,18 @@
     } */
     
 
-  .aboutintro h3::after {
-    @apply left-1;
-  }
-
-  .aboutdream__text h6::before {
+  .aboutDream__text h6::before {
     @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
   }
+
+  .aboutTravel__flags img {
+    @apply w-[30px] md:w-[40px] lg:w-[50px]
+  }
+
+  .aboutTravel__flags {
+    @apply flex flex-wrap justify-center;
+  }
+
 }
 
 @layer components {
@@ -182,5 +187,9 @@
 
   .text-shadow {
     @apply [text-shadow:_-3px_5px_9px_rgb(0_0_0_/_100%)];
+  }
+
+  .text-shadow-dark {
+    @apply [text-shadow:_-3px_5px_9px_rgb(50_50_50_/_100%)];
   }
 }

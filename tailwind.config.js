@@ -16,9 +16,12 @@ module.exports = {
         },
       },
 
+      filter: ["hover", "focus"],
+      saturate: ["hover", "focus"],
+
       animation: {
         moveIn: "moveIn 1s ease-in-out",
-        fadeIn: "fadeIn 2s ease-in-out"
+        fadeIn: "fadeIn 2s ease-in-out",
       },
 
       fontFamily: {
@@ -32,5 +35,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
