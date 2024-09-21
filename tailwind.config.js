@@ -23,6 +23,7 @@ module.exports = {
 
       fontFamily: {
         poppins: "Poppins",
+        nautigal: ['"The Nautigal"', "cursive"],
       },
 
       colors: {
