@@ -143,6 +143,60 @@
     @apply flex flex-wrap justify-center;
   }
 
+  /* CONTACT PAGE */
+
+  .contact input, .contact textarea {
+    @apply border-secondary;
+  }
+
+  /* FAQS PAGE */
+  .faqs__wrapper h5 {
+    @apply flex justify-between py-3 px-5 bg-secondary items-center mb-2 cursor-pointer;
+  }
+
+  .faqs__wrapper h5:last-of-type {
+    @apply mb-0;
+  }
+
+  .faqs__wrapper p {
+    @apply px-5 items-center text-justify h-auto max-h-0 overflow-hidden duration-700 mb-3;
+  }
+
+  .faqs__wrapper p.open {
+    @apply max-h-[10rem] py-4 ;
+  }
+
+  .faqs__wrapper svg {
+    @apply duration-500;
+  }
+  .faqs__wrapper svg.open {
+    @apply  rotate-[180deg];
+  }
+
+  .faqs__wrapper svg {
+    @apply w-[18px];
+  }
+
+  /* SERVICES PAGE */
+
+  .services__content {
+    @apply flex  w-full flex-col-reverse items-center gap-5 md:flex-row lg:flex-row lg:justify-between relative;
+  }
+  .services__content img {
+    @apply rounded-full w-[15rem] h-[15rem] md:w-[18rem] md:h-[18rem] lg:w-[30rem] lg:h-[30rem];
+  }
+
+  .services__content h3 {
+    @apply decorative lg:text-[70px] lg:leading-[75px] text-[40px] leading-[45px] text-primary;
+  }
+  
+  .services__content svg {
+    @apply w-full h-[35px] absolute text-center self-end rotate-180 fill-primary hidden lg:block;
+  }
+  
+  .offered svg {
+    @apply lg:w-[80px] lg:h-[80px] w-[50px] h-[50px]
+  }
 }
 
 @layer components {
