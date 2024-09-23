@@ -180,10 +180,15 @@
   /* SERVICES PAGE */
 
   .services__content {
-    @apply flex  w-full flex-col-reverse items-center gap-5 md:flex-row lg:flex-row lg:justify-between relative;
+    @apply flex  w-full flex-col-reverse items-center gap-5 md:flex-row lg:flex-row lg:gap-16 relative pb-20 pt-10 justify-center;
   }
+
+  .services__content:nth-child(even) {
+    @apply lg:flex-row-reverse bg-secondary;
+  }
+
   .services__content img {
-    @apply rounded-full w-[15rem] h-[15rem] md:w-[18rem] md:h-[18rem] lg:w-[30rem] lg:h-[30rem];
+    @apply rounded-full w-[15rem] h-[15rem] md:w-[18rem] md:h-[18rem] lg:w-[30rem] lg:h-[30rem] object-cover;
   }
 
   .services__content h3 {
@@ -191,12 +196,17 @@
   }
   
   .services__content svg {
-    @apply w-full h-[35px] absolute text-center self-end rotate-180 fill-primary hidden lg:block;
+    @apply w-[35px] right-[50%] absolute text-center bottom-5 rotate-180 fill-primary hidden lg:block;
   }
+
+  .services__content:last-child svg {
+  @apply hidden;
+}
   
   .offered svg {
-    @apply lg:w-[80px] lg:h-[80px] w-[50px] h-[50px]
+    @apply lg:w-[80px] lg:h-[80px] w-[50px] h-[50px];
   }
+
 }
 
 @layer components {
