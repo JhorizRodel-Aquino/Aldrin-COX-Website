@@ -1,19 +1,19 @@
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  //   direction: "vertical",
+var swiper = new Swiper(".testimonials__slider", {
   loop: true,
   speed: 1000,
+  centerSlide: true,
+  fade: true,
+  grabCursor: true,
 
-  // If we need pagination
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    prevEl: ".prev",
   },
 
   autoplay: {
@@ -24,7 +24,7 @@ const swiper = new Swiper(".swiper", {
     // when window width is >= 320px
     0: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 180,
     },
     1024: {
       slidesPerView: 3,
