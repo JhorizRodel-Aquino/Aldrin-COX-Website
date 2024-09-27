@@ -1,4 +1,4 @@
-const { transform } = require('sucrase');
+const { transform } = require("sucrase");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -14,11 +14,16 @@ module.exports = {
           "0%, 50%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        slide: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
 
       animation: {
         moveIn: "moveIn 1s ease-in-out",
-        fadeIn: "fadeIn 2s ease-in-out"
+        fadeIn: "fadeIn 2s ease-in-out",
+        slide: "slide 8s infinite linear",
       },
 
       fontFamily: {
