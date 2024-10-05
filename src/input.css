@@ -187,7 +187,7 @@
     @apply lg:flex-row-reverse md:flex-row-reverse bg-secondary;
   }
 
-  .services__content img {
+  .services__content .visa {
     @apply rounded-full w-[15rem] h-[15rem] md:w-[18rem] md:h-[18rem] lg:w-[30rem] lg:h-[30rem] object-cover;
   }
 

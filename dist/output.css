@@ -1280,7 +1280,7 @@ header{
   }
 }
 
-.services__content img{
+.services__content .visa{
   height: 15rem;
   width: 15rem;
   border-radius: 9999px;
@@ -1289,14 +1289,14 @@ header{
 }
 
 @media (min-width: 768px){
-  .services__content img{
+  .services__content .visa{
     height: 18rem;
     width: 18rem;
   }
 }
 
 @media (min-width: 1024px){
-  .services__content img{
+  .services__content .visa{
     height: 30rem;
     width: 30rem;
   }
@@ -1526,6 +1526,14 @@ header{
   margin-top: 5rem;
 }
 
+.block{
+  display: block;
+}
+
+.inline{
+  display: inline;
+}
+
 .flex{
   display: flex;
 }
@@ -1558,12 +1566,12 @@ header{
   width: 12px;
 }
 
-.w-\[40\%\]{
-  width: 40%;
+.w-\[1rem\]{
+  width: 1rem;
 }
 
-.w-\[55\%\]{
-  width: 55%;
+.w-\[40\%\]{
+  width: 40%;
 }
 
 .w-\[70\%\]{
@@ -1582,6 +1590,26 @@ header{
   width: 100%;
 }
 
+.w-\[2rem\]{
+  width: 2rem;
+}
+
+.w-\[1\.5rem\]{
+  width: 1.5rem;
+}
+
+.w-\[14rem\]{
+  width: 14rem;
+}
+
+.w-\[\]{
+  width: ;
+}
+
+.w-\[50rem\]{
+  width: 50rem;
+}
+
 .max-w-\[100\%\]{
   max-width: 100%;
 }
@@ -1590,12 +1618,20 @@ header{
   max-width: 250px;
 }
 
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
 
 .flex-col-reverse{
   flex-direction: column-reverse;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
 }
 
 .items-start{
@@ -1724,6 +1760,10 @@ header{
   background-repeat: no-repeat;
 }
 
+.p-2{
+  padding: 0.5rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1764,19 +1804,14 @@ header{
   padding-bottom: 0.75rem;
 }
 
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-6{
@@ -1785,6 +1820,10 @@ header{
 
 .pb-\[6px\]{
   padding-bottom: 6px;
+}
+
+.pt-4{
+  padding-top: 1rem;
 }
 
 .text-center{
@@ -1994,14 +2033,14 @@ header{
     padding-bottom: 5rem;
   }
 
-  .lg\:py-\[45px\]{
-    padding-top: 45px;
-    padding-bottom: 45px;
-  }
-
   .lg\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:py-\[45px\]{
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 
   .lg\:pt-\[2rem\]{
