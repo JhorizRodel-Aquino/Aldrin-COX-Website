@@ -15,7 +15,7 @@
     @apply text-6xl lg:text-7xl font-bold;
   }
   h2 {
-    @apply lg:text-[95px] lg:leading-[95px] text-4xl font-bold;
+    @apply lg:text-[75px] lg:leading-[75px] md:text-[40px] md:leading-[50px] text-4xl font-bold;
   }
   h3 {
     @apply lg:text-4xl text-lg font-semibold;
@@ -30,11 +30,11 @@
     @apply text-xs;
   }
   p {
-    @apply lg:text-base text-[11px];
+    @apply lg:text-base text-[11px] leading-[16px];
   }
 
   header {
-    @apply absolute w-full;
+    @apply absolute w-full z-50;
   }
 
   .header__logo img {
@@ -76,6 +76,10 @@
 
   .homeBanner__slider::before {
     @apply content-[''] w-full h-full absolute top-0 bg-black/30 z-10;
+  }
+
+  .homeBanner__slider::after {
+    @apply content-[''] w-full h-full absolute top-0 bg-primary/10 z-10;
   }
 
   .moveIn {
@@ -184,7 +188,7 @@
   }
 
   .footer__menu li {
-    @apply lg:text-base text-[11px];
+    @apply lg:text-base text-[11px] leading-[16px];
   }
 
   .footer__menu li {
@@ -197,31 +201,138 @@
   }
 
   /* ABOUT PAGE */
-
-  .aboutdream__text h6::before {
+  .aboutDream__text h6::before {
     @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
   }
 
-  /* .abouttravel img {
-        @apply w-[30px] lg:w-[50px];
-    } */
-
-  .aboutintro h3::after {
-    @apply left-1;
+  .aboutDream__text h6::before {
+    @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
   }
 
-  .aboutdream__text h6::before {
-    @apply content-[""] inline-block relative w-[9rem] h-[1px] bg-black mb-0.5  right-1;
+  .aboutTravel__flags img {
+    @apply w-[30px] md:w-[40px] lg:w-[50px];
+  }
+
+  .aboutTravel__flags {
+    @apply flex flex-wrap justify-center;
+  }
+
+  /* CONTACT PAGE */
+
+  .contact input,
+  .contact textarea {
+    @apply border-none resize-none p-3 w-full lg:text-base text-[11px] leading-[16px];;
+  }
+
+  .contact input::placeholder {
+    @apply lg:text-base text-[11px] leading-[16px];
+  }
+
+  /* FAQS PAGE */
+  .faqs__wrapper h5 {
+    @apply flex justify-between py-3 px-5 bg-secondary items-center mb-2 cursor-pointer;
+  }
+
+  .faqs__wrapper h5:last-of-type {
+    @apply mb-0;
+  }
+
+  .faqs__wrapper p {
+    @apply px-5 items-center text-justify h-auto max-h-0 overflow-hidden duration-700 mb-3;
+  }
+
+  .faqs__wrapper p.open {
+    @apply max-h-[10rem] py-4;
+  }
+
+  .faqs__wrapper svg {
+    @apply duration-500;
+  }
+  .faqs__wrapper svg.open {
+    @apply rotate-[180deg];
+  }
+
+  .faqs__wrapper svg {
+    @apply w-[18px];
+  }
+
+  /* SERVICES PAGE */
+  .services__card:nth-child(even) {
+    @apply bg-secondary;
+  }
+
+  .services__card:last-child svg {
+    @apply hidden;
+  }
+
+  .services__content {
+    @apply flex flex-col-reverse items-center gap-5 lg:flex-row lg:gap-16 relative pb-20 pt-10 lg:pb-40 lg:pt-20 justify-center w-[95%] md:w-[70%] lg:w-[80%] max-w-[1600px] mx-auto;
+  }
+
+  .services__card:nth-child(even) .services__content {
+    @apply lg:flex-row-reverse;
+  }
+
+  .services__card:last-child .services__content{
+    @apply pb-10 lg:pb-20;
+  }
+
+  .services__content .visa {
+    @apply rounded-full w-[15rem] h-[15rem] md:w-[18rem] md:h-[18rem] lg:w-[30rem] lg:h-[30rem] object-cover relative;
+  }
+
+  .services__content h3 {
+    @apply decorative lg:text-[70px] lg:leading-[75px] text-[40px] leading-[45px] text-primary;
+  }
+
+  .services__content svg {
+    @apply w-[35px] right-[50%] absolute text-center bottom-5 rotate-180 fill-primary hidden lg:block;
+  }
+
+  .servicesOrder label {
+    @apply flex flex-col justify-between items-center lg:gap-3 gap-1;
+  }
+
+  .servicesOrder label svg {
+    @apply lg:w-[40px] lg:h-[40px] w-[30px] h-[30px];
+  }
+
+  .servicesOrder label input {
+    @apply checked:text-primary focus:outline-primary lg:text-base text-[11px] leading-[16px];;
+  }
+
+  .servicesOrder__form input {
+    @apply bg-secondary border-none p-3 w-full;
+  }
+
+  .servicesOrder__form input:focus {
+    @apply outline-none;
+  }
+
+  .servicesOrder__form input::placeholder {
+    @apply lg:text-base text-[11px] leading-[16px];
   }
 }
 
 @layer components {
   .banner {
-    @apply bg-no-repeat w-full bg-cover bg-center h-[45vh] shadow-xl;
+    @apply bg-no-repeat w-full bg-cover h-[45vh] bg-center relative z-[-1];
+  }
+
+  .banner::after {
+    @apply content-[""] bg-primary/15 w-full h-full absolute z-10 top-0;
   }
 
   .banner__wrapper {
     @apply flex items-center justify-center h-[45vh];
+  }
+
+  .banner h2 {
+    @apply lg:text-[95px] lg:leading-[95px] md:text-[72px] md:leading-[72px] text-5xl font-bold text-shadow z-30;
+  }
+
+  .shadow-effect {
+    @apply  shadow-[0_-7px_30px_rgb(0_0_0_/_.8)];
   }
 
   .line-text {
@@ -250,6 +361,9 @@
   .btn.srvcs {
     @apply border-primary bg-primary duration-300 shadow-none py-2 px-4;
   }
+  .btn.frms {
+    @apply border-primary bg-primary hover:bg-transparent hover:text-primary duration-300;
+  }
 }
 
 @layer utilities {
@@ -259,5 +373,9 @@
 
   .text-shadow {
     @apply [text-shadow:_-3px_5px_9px_rgb(0_0_0_/_100%)];
+  }
+
+  .text-shadow-dark {
+    @apply [text-shadow:_-3px_5px_9px_rgb(50_50_50_/_100%)];
   }
 }

@@ -35,16 +35,16 @@
     </header>
 
     <!-- BANNER -->
-    <div class="banner bg-[url('../img/banner_gallery.png')] bg-center">
+    <section class="banner bg-[url('../img/banner_gallery.png')] bg-center">
       <div class="container">
         <div class="banner__wrapper">
-          <h2 class="text-white decorative">About Us</h2>
+          <h2 class=" text-white decorative">Gallery</h2>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- GALLERY -->
-    <section class="gallery py-14">
+    <section class="gallery py-10 lg:py-20 shadow-effect">
       <div class="container">
         <div class="gallery__wrapper">
           <div class="gallery__card">
@@ -99,8 +99,25 @@
       </div>
     </section>
 
+    <!-- CTA -->
+    <section
+      class="CTA bg-[url('../img/CTA.png')] bg-cover bg-no-repeat bg-center py-14 lg:py-24"
+    >
+      <div class="container">
+        <div
+          class="CTA__wrapper grid justify-items-center items-center gap-1 lg:gap-2"
+        >
+          <span class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold">
+            Live your American dream!
+          </span>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <a class="btn bg-prmry mt-3 lg:mt-10" href="">Inquire Now</a>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer class="footer bg-black text-white text-center py-12">
+    <footer class="footer bg-black text-white text-center py-9 lg:py-18 z-10">
       <div class="container">
         <div
           class="footer__wrapper flex flex-col-reverse max-w-[250px] mx-auto gap-12 items-center lg:flex-row lg:justify-between lg:max-w-full lg:gap-0"
@@ -210,5 +227,10 @@
 
     <!-- SCRIPT -->
     <script src="./js/toggle__menu.js"></script>
+    <script src="./js/banner__sldr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/testimonials.js"></script>
+    <script src="./js/gallery__slidr.js"></script>
+    <script src="./js/faqs.js"></script>
   </body>
 </html>
