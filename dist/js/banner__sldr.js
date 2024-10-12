@@ -1,7 +1,6 @@
 const bannerImgs = document.querySelectorAll(".homeBanner__slider img");
 const bannerTxt = document.querySelector(".homeBanner__wrapper");
 
-
 if (bannerImgs.length > 0 && bannerTxt) {
   // only change this value for each slide duration
   // use a value greater than 2000
@@ -45,32 +44,32 @@ if (bannerImgs.length > 0 && bannerTxt) {
       }
     }, duration);
   }, duration);
-}
 
-function removeAllAnimations() {
-  bannerImgs.forEach((img) => {
-    img.classList.remove("moveIn");
-  });
-}
+  function removeAllAnimations() {
+    bannerImgs.forEach((img) => {
+      img.classList.remove("moveIn");
+    });
+  }
 
-function animateText() {
-  setTimeout(() => {
-    bannerTxt.classList.remove("fadeIn");
-  }, resetDuration);
+  function animateText() {
+    setTimeout(() => {
+      bannerTxt.classList.remove("fadeIn");
+    }, resetDuration);
 
-  setTimeout(() => {
-    bannerTxt.classList.add("fadeIn");
-  }, 0);
-}
+    setTimeout(() => {
+      bannerTxt.classList.add("fadeIn");
+    }, 0);
+  }
 
-function animateSlides() {
-  setTimeout(() => {
-    bannerImgs[prev_i].classList.remove("moveIn");
-    bannerImgs[prev_i].classList.add("opacity-0");
-  }, resetDuration);
+  function animateSlides() {
+    setTimeout(() => {
+      bannerImgs[prev_i].classList.remove("moveIn");
+      bannerImgs[prev_i].classList.add("opacity-0");
+    }, resetDuration);
 
-  setTimeout(() => {
-    bannerImgs[curr_i].classList.add("moveIn");
-    bannerImgs[curr_i].classList.remove("opacity-0");
-  }, 0);
+    setTimeout(() => {
+      bannerImgs[curr_i].classList.add("moveIn");
+      bannerImgs[curr_i].classList.remove("opacity-0");
+    }, 0);
+  }
 }

@@ -48,15 +48,27 @@
   }
 
   .header__nav {
-    @apply fixed  z-10 top-[0] right-[-100%] w-[15rem]  py-10 flex flex-col text-center h-full bg-white  justify-center gap-10 ease-in duration-500 lg:right-[0] lg:w-full lg:bg-transparent lg:flex-row lg:text-white lg:justify-end lg:relative;
-  }
-
-  .header__nav li {
-    @apply hover:underline;
+    @apply fixed  z-10 top-[0] right-[-100%] w-[15rem]  py-10 flex flex-col text-center h-full bg-white  justify-center gap-10 ease-in duration-500 lg:right-[0] lg:w-full lg:bg-transparent lg:flex-row lg:text-white lg:justify-end lg:relative items-center;
   }
 
   .header__nav.open {
     @apply right-0;
+  }
+
+  .header__nav li {
+    @apply pb-[3px] relative grid justify-items-center;
+  }
+
+  .header__nav li::after {
+    @apply content-[""] absolute bg-primary h-[10%] w-0 bottom-0 duration-150;
+  }
+
+  .header__nav li:hover::after {
+    @apply w-[110%];
+  }
+
+  .header__nav li.Active {
+    @apply scale-110 font-semibold;
   }
 
   .toggle__menu {
@@ -80,7 +92,7 @@
   }
 
   .backdrop.open {
-    @apply backdrop-blur-[2px] fixed;
+    @apply backdrop-blur-[2px] fixed block;
   }
 
   /* HOME PAGE */
@@ -120,7 +132,7 @@
   }
 
   .homeServices__card {
-    @apply grid justify-items-center items-center py-[18px] lg:py-[33px] px-[3%] border-2 border-transparent text-center min-w-[300px] max-w-[300px] lg:max-w-[368px] gap-5 relative hover:bg-secondary hover:border-2 hover:border-black;
+    @apply grid justify-items-center items-center py-[18px] lg:py-[33px] px-[3%] border-2 border-transparent text-center min-w-[300px] max-w-[300px] lg:max-w-[368px] gap-5 relative duration-200 lg:hover:bg-secondary lg:hover:border-2 lg:hover:border-black;
   }
 
   .homeServices__card span {
@@ -158,6 +170,63 @@
   .swiper-rtl .swiper-button-next:after {
     @apply text-primary;
   }
+
+  .homeGallery .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homeGallery .swiper-slide img {
+    display: block;
+    object-position: center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .homeGallery .mySwiper .swiper-slide img {
+    display: block;
+    object-position: center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .homeGallery .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .homeGallery .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .homeGallery .mySwiper2 {
+    height: 80%;
+    width: 100%;
+  }
+
+  .homeGallery .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .homeGallery .mySwiper .swiper-slide {
+    width: 25%;
+    opacity: 0.4;
+  }
+
+  .homeGallery .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
   .homeGallery .swiper-button-next:after,
   .homeGallery .swiper-rtl .swiper-button-prev:after,
   .homeGallery .swiper-button-prev:after,
@@ -311,7 +380,7 @@
   }
 
   .services__add .additionals:last-child {
-    @apply  lg:w-[15rem];
+    @apply lg:w-[15rem];
   }
 
   .servicesOrder label {
@@ -381,13 +450,13 @@
   }
 
   .btn.bg-prmry {
-    @apply border-primary bg-primary hover:bg-transparent duration-300 hover:text-shadow;
+    @apply border-primary bg-primary lg:hover:bg-transparent duration-300 lg:hover:text-shadow;
   }
   .btn.srvcs {
     @apply border-primary bg-primary duration-300 shadow-none py-2 px-4;
   }
   .btn.frms {
-    @apply border-primary bg-primary hover:bg-transparent hover:text-primary duration-300;
+    @apply border-primary bg-primary lg:hover:bg-transparent lg:hover:text-primary duration-300;
   }
 }
 
