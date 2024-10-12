@@ -1,4 +1,4 @@
-function sendMail(event) {
+function inquire(event) {
   event.preventDefault(); // Prevent the page from refreshing
 
   // Get the form inputs
