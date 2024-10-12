@@ -26,7 +26,7 @@ module.exports = {
       animation: {
         moveIn: "moveIn 1s ease-in-out",
         fadeIn: "fadeIn 2s ease-in-out",
-        slide: "slide 8s infinite linear",
+        slide: "slide 20s infinite linear",
       },
 
       fontFamily: {

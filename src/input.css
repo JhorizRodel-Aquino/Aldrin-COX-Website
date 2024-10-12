@@ -8,6 +8,11 @@
   body {
     @apply font-poppins overflow-x-hidden;
   }
+
+  body.open {
+    @apply overflow-y-hidden;
+  }
+
   .container {
     @apply max-w-[1600px] mx-auto lg:px-[50px] px-[20px];
   }
@@ -33,6 +38,7 @@
     @apply lg:text-base text-[11px] leading-[16px];
   }
 
+  /* HEADER */
   header {
     @apply absolute w-full z-50;
   }
@@ -42,7 +48,7 @@
   }
 
   .header__nav {
-    @apply fixed  z-10 top-[0] right-[-100%] w-[15rem]  py-10 flex flex-col text-center h-full bg-white  justify-center gap-10 ease-in duration-700 lg:right-[0] lg:w-full lg:bg-transparent lg:flex-row lg:text-white lg:justify-end lg:relative;
+    @apply fixed  z-10 top-[0] right-[-100%] w-[15rem]  py-10 flex flex-col text-center h-full bg-white  justify-center gap-10 ease-in duration-500 lg:right-[0] lg:w-full lg:bg-transparent lg:flex-row lg:text-white lg:justify-end lg:relative;
   }
 
   .header__nav li {
@@ -50,11 +56,15 @@
   }
 
   .header__nav.open {
-    @apply right-0  overflow-y-hidden;
+    @apply right-0;
   }
 
   .toggle__menu {
-    @apply flex flex-col gap-1 ease-in duration-700 lg:hidden;
+    @apply flex flex-col gap-1 lg:hidden;
+  }
+
+  .toggle__menu span {
+    @apply content-[""] bg-white w-8 h-1 ease-in-out duration-700 z-20;
   }
 
   .toggle__menu.open span:first-child {
@@ -65,8 +75,12 @@
     @apply rotate-[140deg] bg-black;
   }
 
-  .toggle__menu span {
-    @apply content-[""] bg-white w-8 h-1 ease-in-out duration-700 z-20;
+  .backdrop {
+    @apply w-[100dvh] h-[100dvh] hidden top-0;
+  }
+
+  .backdrop.open {
+    @apply backdrop-blur-[2px] fixed;
   }
 
   /* HOME PAGE */
@@ -75,11 +89,11 @@
   }
 
   .homeBanner__slider::before {
-    @apply content-[''] w-full h-full absolute top-0 bg-black/30 z-10;
+    @apply content-[''] w-full h-full absolute top-0 bg-black/40 z-20;
   }
 
   .homeBanner__slider::after {
-    @apply content-[''] w-full h-full absolute top-0 bg-primary/10 z-10;
+    @apply content-[''] w-full h-full absolute top-0 bg-primary/15 z-10;
   }
 
   .moveIn {
@@ -94,12 +108,15 @@
     @apply animate-slide inline-block;
   }
   .headline__items {
-    @apply text-white uppercase inline;
+    @apply text-white uppercase inline-block;
   }
 
-  .headline__items h4,
-  .headline__items img {
-    @apply inline mr-6;
+  .headline__items h5 {
+    @apply inline-block px-12 relative;
+  }
+
+  .headline__items h5::after {
+    @apply content-[url('../icons/plane.svg')] absolute lg:translate-y-[15%] translate-x-[50%] right-0;
   }
 
   .homeServices__card {
@@ -221,7 +238,7 @@
 
   .contact input,
   .contact textarea {
-    @apply border-none resize-none p-3 w-full lg:text-base text-[11px] leading-[16px];;
+    @apply border-none bg-secondary resize-none p-3 w-full lg:text-base text-[11px] leading-[16px] focus:outline-primary focus:ring-0;
   }
 
   .contact input::placeholder {
@@ -266,15 +283,19 @@
   }
 
   .services__content {
-    @apply flex flex-col-reverse items-center gap-5 lg:flex-row lg:gap-16 relative pb-20 pt-10 lg:pb-40 lg:pt-20 justify-center w-[95%] md:w-[70%] lg:w-[80%] max-w-[1600px] mx-auto;
+    @apply flex flex-col-reverse items-center gap-5 xl:flex-row lg:gap-16 relative pb-20 pt-10 lg:pb-32 lg:pt-16 justify-center w-[95%] md:w-[85%] lg:w-[80%] max-w-[1600px] mx-auto;
   }
 
   .services__card:nth-child(even) .services__content {
-    @apply lg:flex-row-reverse;
+    @apply xl:flex-row-reverse;
   }
 
-  .services__card:last-child .services__content{
-    @apply pb-10 lg:pb-20;
+  .services__card:last-child .services__content {
+    @apply pb-10 lg:pb-16;
+  }
+
+  .services__text {
+    @apply xl:w-[60%] text-center grid gap-3 px-3 xl:px-0;
   }
 
   .services__content .visa {
@@ -286,7 +307,11 @@
   }
 
   .services__content svg {
-    @apply w-[35px] right-[50%] absolute text-center bottom-5 rotate-180 fill-primary hidden lg:block;
+    @apply w-[35px] right-[50%] translate-x-[50%] absolute text-center bottom-5 lg:bottom-10 rotate-180 fill-primary;
+  }
+
+  .services__add .additionals:last-child {
+    @apply  lg:w-[15rem];
   }
 
   .servicesOrder label {
@@ -298,15 +323,11 @@
   }
 
   .servicesOrder label input {
-    @apply checked:text-primary focus:outline-primary lg:text-base text-[11px] leading-[16px];;
+    @apply checked:text-primary lg:text-base text-[11px] leading-[16px] focus:outline-primary focus:ring-0;
   }
 
   .servicesOrder__form input {
-    @apply bg-secondary border-none p-3 w-full;
-  }
-
-  .servicesOrder__form input:focus {
-    @apply outline-none;
+    @apply bg-secondary border-none p-3 w-full focus:outline-primary focus:ring-0;
   }
 
   .servicesOrder__form input::placeholder {
@@ -319,6 +340,10 @@
     @apply bg-no-repeat w-full bg-cover h-[45vh] bg-center relative z-[-1];
   }
 
+  .banner::before {
+    @apply content-[""] bg-black/40 w-full h-full absolute z-20 top-0;
+  }
+
   .banner::after {
     @apply content-[""] bg-primary/15 w-full h-full absolute z-10 top-0;
   }
@@ -328,11 +353,11 @@
   }
 
   .banner h2 {
-    @apply lg:text-[95px] lg:leading-[95px] md:text-[72px] md:leading-[72px] text-5xl font-bold text-shadow z-30;
+    @apply font-bold text-shadow text-white z-30 text-center;
   }
 
   .shadow-effect {
-    @apply  shadow-[0_-7px_30px_rgb(0_0_0_/_.8)];
+    @apply shadow-[0_-7px_30px_rgb(0_0_0_/_.8)];
   }
 
   .line-text {

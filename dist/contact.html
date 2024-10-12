@@ -20,9 +20,8 @@
 
   <body>
     <!-- HEADER -->
-    <header>
-      <div class="container">
-        <div class="header__wrapper flex justify-between items-center">
+    <header class="header">
+        <div class="header__wrapper flex justify-between items-center px-10 lg:px-20 max-w-[1600px] mx-auto">
           <div class="header__logo">
             <a href="./index.html"><img src="../img/Logo.png" alt="" /></a>
           </div>
@@ -42,16 +41,13 @@
           </div>
         </div>
         <div class="backdrop"></div>
-      </div>
     </header>
 
     <!-- BANNER -->
     <section class="banner bg-[url('../img/banner_contact.png')]">
       <div class="container">
         <div class="banner__wrapper">
-          <h2 class="text-center font-nautigal font-bold text-white">
-            Contact Us
-          </h2>
+          <h2>Contact Us</h2>
         </div>
       </div>
     </section>
@@ -62,30 +58,30 @@
         <form class="contact__wrapper grid gap-5 w-[70%] lg:w-[50%] mx-auto">
           <div class="flex flex-col gap-5 lg:flex-row">
             <input
-            class="required bg-secondary"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Full Name"
-          />
-          <input
-            class="required bg-secondary"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email Address"
-          />
+              class="required"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+            />
+            <input
+              class="required"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+            />
           </div>
-          
+
           <input
-            class="required bg-secondary"
+            class="required"
             type="url"
             id="facebook"
             name="facebook"
             placeholder="Facebook Link"
           />
           <textarea
-            class="required bg-secondary"
+            class="required"
             placeholder="Message"
             name="message"
             id="message"
@@ -220,5 +216,14 @@
     <script src="./js/testimonials.js"></script>
     <script src="./js/gallery__slidr.js"></script>
     <script src="./js/faqs.js"></script>
+    <script src="./js/services.js"></script>
+    <script src="./js/contact.js"></script>
+    <script>
+      const Body = document.querySelector("body");
+
+      toggleMenu.addEventListener("click", () => {
+        Body.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>

@@ -9,9 +9,8 @@
 
   <body>
     <!-- HEADER -->
-    <header class="header z-40">
-      <div class="container">
-        <div class="header__wrapper flex justify-between items-center">
+    <header class="header">
+        <div class="header__wrapper flex justify-between items-center px-10 lg:px-20 max-w-[1600px] mx-auto">
           <div class="header__logo">
             <a href="./index.html"><img src="../img/Logo.png" alt="" /></a>
           </div>
@@ -31,14 +30,13 @@
           </div>
         </div>
         <div class="backdrop"></div>
-      </div>
     </header>
 
     <!-- BANNER -->
     <section class="banner bg-[url('../img/banner_gallery.png')] bg-center">
       <div class="container">
         <div class="banner__wrapper">
-          <h2 class=" text-white decorative">Gallery</h2>
+          <h2>Gallery</h2>
         </div>
       </div>
     </section>
@@ -107,11 +105,13 @@
         <div
           class="CTA__wrapper grid justify-items-center items-center gap-1 lg:gap-2"
         >
-          <span class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold">
+          <span
+            class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold"
+          >
             Live your American dream!
           </span>
           <p>Lorem ipsum dolor sit amet consectetur.</p>
-          <a class="btn bg-prmry mt-3 lg:mt-10" href="">Inquire Now</a>
+          <a class="btn bg-prmry mt-3 lg:mt-10" href="services.html#order">Inquire Now</a>
         </div>
       </div>
     </section>
@@ -232,5 +232,14 @@
     <script src="./js/testimonials.js"></script>
     <script src="./js/gallery__slidr.js"></script>
     <script src="./js/faqs.js"></script>
+    <script src="./js/services.js"></script>
+    <script src="./js/contact.js"></script>
+    <script>
+      const Body = document.querySelector("body");
+
+      toggleMenu.addEventListener("click", () => {
+        Body.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
