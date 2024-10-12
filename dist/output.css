@@ -1167,8 +1167,8 @@ header{
   position: relative;
   display: grid;
   justify-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   text-align: center;
 }
 
@@ -2013,16 +2013,16 @@ header{
   margin-left: 20%;
 }
 
-.mt-10{
-  margin-top: 2.5rem;
-}
-
 .mt-3{
   margin-top: 0.75rem;
 }
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .block{
@@ -2063,10 +2063,6 @@ header{
 
 .w-60{
   width: 15rem;
-}
-
-.w-72{
-  width: 18rem;
 }
 
 .w-\[1\.5rem\]{
@@ -2179,10 +2175,6 @@ header{
 
 .gap-2{
   gap: 0.5rem;
-}
-
-.gap-20{
-  gap: 5rem;
 }
 
 .gap-3{
@@ -2382,6 +2374,10 @@ header{
   font-size: 11px;
 }
 
+.text-\[40px\]{
+  font-size: 40px;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -2400,6 +2396,10 @@ header{
 
 .leading-\[20px\]{
   line-height: 20px;
+}
+
+.leading-\[45px\]{
+  line-height: 45px;
 }
 
 .text-primary{
@@ -2463,6 +2463,10 @@ header{
 @media (min-width: 768px){
   .md\:bottom-14{
     bottom: 3.5rem;
+  }
+
+  .md\:mb-5{
+    margin-bottom: 1.25rem;
   }
 
   .md\:block{
@@ -2545,6 +2549,11 @@ header{
     position: static;
   }
 
+  .lg\:my-20{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
   .lg\:mb-16{
     margin-bottom: 4rem;
   }
@@ -2555,6 +2564,10 @@ header{
 
   .lg\:mt-10{
     margin-top: 2.5rem;
+  }
+
+  .lg\:mb-5{
+    margin-bottom: 1.25rem;
   }
 
   .lg\:block{
@@ -2691,6 +2704,10 @@ header{
     line-height: 1.5rem;
   }
 
+  .lg\:text-\[70px\]{
+    font-size: 70px;
+  }
+
   .lg\:leading-\[30px\]{
     line-height: 30px;
   }
@@ -2701,6 +2718,10 @@ header{
 
   .lg\:leading-\[70px\]{
     line-height: 70px;
+  }
+
+  .lg\:leading-\[75px\]{
+    line-height: 75px;
   }
 }
 

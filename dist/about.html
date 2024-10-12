@@ -3,33 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aldrin COX - About</title>
+    <title>Aldrin COX - Contact</title>
     <link rel="stylesheet" href="./output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "pTqqaW4QQPbbe_8-G",
+        });
+      })();
+    </script>
   </head>
 
   <body>
     <!-- HEADER -->
     <header class="header">
-        <div class="header__wrapper flex justify-between items-center px-10 lg:px-20 max-w-[1600px] mx-auto">
-          <div class="header__logo">
-            <a href="./index.html"><img src="../img/Logo.png" alt="" /></a>
-          </div>
-          <nav>
-            <ul class="header__nav">
-              <li><a href="./about.html">ABOUT</a></li>
-              <li><a href="./services.html">SERVICES</a></li>
-              <li><a href="./gallery.html">GALLERY</a></li>
-              <li><a href="./faqs.html">FAQs</a></li>
-              <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-          </nav>
-
-          <div class="toggle__menu">
-            <span class=""></span>
-            <span class=""></span>
-          </div>
+      <div
+        class="header__wrapper flex justify-between items-center px-10 lg:px-20 max-w-[1600px] mx-auto"
+      >
+        <div class="header__logo">
+          <a href="./index.html"><img src="../img/Logo.png" alt="" /></a>
         </div>
-        <div class="backdrop"></div>
+        <nav>
+          <ul class="header__nav">
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./services.html">SERVICES</a></li>
+            <li><a href="./gallery.html">GALLERY</a></li>
+            <li><a href="./faqs.html">FAQs</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggle__menu">
+          <span class=""></span>
+          <span class=""></span>
+        </div>
+      </div>
+      <div class="backdrop"></div>
     </header>
 
     <!-- BANNER -->
@@ -48,7 +58,7 @@
           class="aboutintro__wrapper text-center grid gap-3 lg:gap-5 max-w-[1100px] mx-auto"
         >
           <h3 class="line-text">Hello Sissy!</h3>
-          <h2 class="text-primary font-nautigal font-bold">I am Aldrin,</h2>
+          <h3 class="decorative lg:text-[70px] lg:leading-[75px] text-[40px] leading-[45px] text-primary">I am Aldrin,</h3>
           <p class="lg:w-[85%] w-full mx-auto">
             My love for travel has taken me from the bustling streets of Manila
             to the sunny shores of Florida! I started my journey as a working
@@ -91,10 +101,10 @@
             class="hidden md:block lg:block lg:h-[30rem] md:h-[15rem]"
           />
           <div class="aboutDream__text text-center lg:w-[50%] md:w-[50%]">
-            <h2 class="text-primary font-nautigal font-bold lg:leading-[70px]">
+            <h3 class="decorative lg:text-[70px] lg:leading-[75px] text-[40px] leading-[45px] text-primary">
               Living<br class="hidden lg:block" />
               my American dream!
-            </h2>
+            </h3>
             <h6>since 2018</h6>
             <br />
             <p>
@@ -122,12 +132,12 @@
         <div
           class="aboutTravel__wrapper flex flex-col items-center lg:flex-row lg:justify-evenly text-center"
         >
-          <h2
-            class="text-primary pb-6 font-nautigal font-bold lg:leading-[70px]"
+          <h3
+            class="decorative lg:text-[70px] lg:leading-[75px] text-[40px] leading-[45px] text-primary"
           >
             Countries I've explored<br class="hidden lg:block" />—and more
             coming soon!
-          </h2>
+          </h3>
           <div class="aboutTravel__all grid justify-center text-cente gap-5">
             <div class="aboutTravel__countries">
               <h4 class="italic font-semibold">Asia</h4>
@@ -182,13 +192,13 @@
         <div
           class="CTA__wrapper grid justify-items-center items-center gap-1 lg:gap-2"
         >
-          <span
+          <h3
             class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold"
           >
             Live your American dream!
-          </span>
+          </h3>
           <p>Lorem ipsum dolor sit amet consectetur.</p>
-          <a class="btn bg-prmry mt-3 lg:mt-10" href="services.html#order">Inquire Now</a>
+          <a class="btn bg-prmry mt-3 lg:mt-10" href="">Inquire Now</a>
         </div>
       </div>
     </section>

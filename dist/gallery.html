@@ -3,33 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aldrin COX - Gallery</title>
+    <title>Aldrin COX - Contact</title>
     <link rel="stylesheet" href="./output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "pTqqaW4QQPbbe_8-G",
+        });
+      })();
+    </script>
   </head>
 
   <body>
     <!-- HEADER -->
     <header class="header">
-        <div class="header__wrapper flex justify-between items-center px-10 lg:px-20 max-w-[1600px] mx-auto">
-          <div class="header__logo">
-            <a href="./index.html"><img src="../img/Logo.png" alt="" /></a>
-          </div>
-          <nav>
-            <ul class="header__nav">
-              <li><a href="./about.html">ABOUT</a></li>
-              <li><a href="./services.html">SERVICES</a></li>
-              <li><a href="./gallery.html">GALLERY</a></li>
-              <li><a href="./faqs.html">FAQs</a></li>
-              <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-          </nav>
-
-          <div class="toggle__menu">
-            <span class=""></span>
-            <span class=""></span>
-          </div>
+      <div
+        class="header__wrapper flex justify-between items-center px-10 lg:px-20 max-w-[1600px] mx-auto"
+      >
+        <div class="header__logo">
+          <a href="./index.html"><img src="../img/Logo.png" alt="" /></a>
         </div>
-        <div class="backdrop"></div>
+        <nav>
+          <ul class="header__nav">
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./services.html">SERVICES</a></li>
+            <li><a href="./gallery.html">GALLERY</a></li>
+            <li><a href="./faqs.html">FAQs</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggle__menu">
+          <span class=""></span>
+          <span class=""></span>
+        </div>
+      </div>
+      <div class="backdrop"></div>
     </header>
 
     <!-- BANNER -->
@@ -105,13 +115,13 @@
         <div
           class="CTA__wrapper grid justify-items-center items-center gap-1 lg:gap-2"
         >
-          <span
+          <h3
             class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold"
           >
             Live your American dream!
-          </span>
+          </h3>
           <p>Lorem ipsum dolor sit amet consectetur.</p>
-          <a class="btn bg-prmry mt-3 lg:mt-10" href="services.html#order">Inquire Now</a>
+          <a class="btn bg-prmry mt-3 lg:mt-10" href="">Inquire Now</a>
         </div>
       </div>
     </section>

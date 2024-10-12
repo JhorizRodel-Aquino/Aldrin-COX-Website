@@ -139,7 +139,7 @@
   }
 
   .client {
-    @apply grid text-center justify-items-center py-[32px] lg:py-[63px] relative;
+    @apply grid text-center justify-items-center py-[24px] lg:py-[63px] relative;
   }
 
   .client svg {

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aldrin COX - Contact</title>
     <link rel="stylesheet" href="./output.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
       (function () {
         emailjs.init({
           publicKey: "pTqqaW4QQPbbe_8-G",
@@ -335,7 +332,7 @@
         >
           <div class="servicesOrder__form grid gap-5 w-full max-w-[25rem]">
             <div>
-              <form action="" class="servicesOrder__info grid gap-7">
+              <form class="servicesOrder__info grid gap-7">
                 <input type="text" id="name" placeholder="Full Name" />
                 <input type="email" id="email" placeholder="Email Address" />
                 <input type="url" id="facebook" placeholder="Facebook Link" />
@@ -352,7 +349,7 @@
           <div
             class="servicesOrder__offered grid md:grid-cols-3 justify-center text-center gap-5 lg:gap-3 pb-5"
           >
-            <label for="k1">
+            <label class="font-semibold" for="k1">
               <svg
                 viewBox="0 0 40 51"
                 fill="none"
@@ -391,7 +388,7 @@
                   fill="#BB141B"
                 />
               </svg>
-              <h5 class="font-semibold">K1 Visa</h5>
+              K1 Visa
               <input
                 type="checkbox"
                 id="k1"
@@ -399,7 +396,7 @@
               />
             </label>
 
-            <label for="b1b2">
+            <label class="font-semibold" for="b1b2">
               <svg
                 viewBox="0 0 40 51"
                 fill="none"
@@ -438,7 +435,7 @@
                   fill="#BB141B"
                 />
               </svg>
-              <h5 class="font-semibold">B1/B2 Visa</h5>
+              B1/B2 Visa
               <input
                 type="checkbox"
                 id="b1b2"
@@ -446,7 +443,7 @@
               />
             </label>
 
-            <label for="greencard">
+            <label class="font-semibold" for="greencard">
               <svg
                 viewBox="0 0 40 51"
                 fill="none"
@@ -485,7 +482,7 @@
                   fill="#BB141B"
                 />
               </svg>
-              <h5 class="font-semibold">Green Card</h5>
+              Green Card
               <input
                 type="checkbox"
                 id="greencard"

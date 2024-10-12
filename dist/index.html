@@ -3,69 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aldrin COX - Gallery</title>
+    <title>Aldrin COX - Contact</title>
     <link rel="stylesheet" href="./output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <style>
-      .homeGallery .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .homeGallery .swiper-slide img {
-        display: block;
-        object-position: center;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
-      .homeGallery .mySwiper .swiper-slide img {
-        display: block;
-        object-position: center;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
-
-      .homeGallery .swiper {
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .homeGallery .swiper-slide {
-        background-size: cover;
-        background-position: center;
-      }
-
-      .homeGallery .mySwiper2 {
-        height: 80%;
-        width: 100%;
-      }
-
-      .homeGallery .mySwiper {
-        height: 20%;
-        box-sizing: border-box;
-        padding: 10px 0;
-      }
-
-      .homeGallery .mySwiper .swiper-slide {
-        width: 25%;
-        opacity: 0.4;
-      }
-
-      .homeGallery .mySwiper .swiper-slide-thumb-active {
-        opacity: 1;
-      }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "pTqqaW4QQPbbe_8-G",
+        });
+      })();
+    </script>
   </head>
 
   <body>
@@ -319,6 +266,7 @@
 
       <!-- VIDEO -->
       <section class="homeVideo">
+        <h3 class="hidden">Short Video</h3>
         <div class="homeVideo__wrapper">
           <iframe
             src="https://www.youtube.com/embed/9w69eAapBU8?si=9rjka4qDTbT-4oaW"
@@ -462,9 +410,11 @@
 
       <!-- ABOUT -->
       <section
-        class="homeAbout bg-[url('../img/profile.png')] relative bg-cover bg-no-repeat md:bg-[0_47%] bg-fixed bg-center sm:bg-local"
+        class="homeAbout bg-[url('../img/profile.png')] relative bg-cover bg-no-repeat md:bg-[0_47%] bg-fixed bg-center sm:bg-local lg:my-20"
       >
-        <div class="homeAbout__backgroundDivider grid grid-cols-1 sm:grid-cols-[6fr_4fr] grid-rows-[6fr_4fr] sm:grid-rows-1 absolute w-full h-full z-[2]">
+        <div
+          class="homeAbout__backgroundDivider grid grid-cols-1 sm:grid-cols-[6fr_4fr] grid-rows-[6fr_4fr] sm:grid-rows-1 absolute w-full h-full z-[2]"
+        >
           <div class="bg-transparent"></div>
           <div class="bg-white"></div>
         </div>
@@ -472,44 +422,22 @@
         <div
           class="homeAbout__wrapper grid grid-cols-1 sm:grid-cols-[6fr_4fr] justify-center w-full max-w-[500px] sm:max-w-[1600px] mx-auto grid-rows-[6fr_4fr] sm:grid-rows-1"
         >
-          <div class="homeAbout__card col-[2_/_3] z-20 bg-white text-center py-5 px-7 sm:py-20 sm:px-10 md:py-28 md:px-16 lg:px-20 lg:py-40 xl:py-[13rem] grid gap-3 md:gap-7 lg:gap-10 row-[2_/_3]">
-
-              <h2
-                class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold"
-              >
-                Aldrin COX Visa Services
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Laoreet donec sem nunc
-                dictumst duis. Amet sem eget convallis consectetur. Porta quam
-                massa maecenas id ultrices mattis. Tellus tristique sapien
-              </p>
-  
+          <div
+            class="homeAbout__card col-[2_/_3] z-20 bg-white text-center py-5 px-7 sm:py-20 sm:px-10 md:py-28 md:px-16 lg:px-20 lg:py-40 xl:py-[13rem] grid gap-3 md:gap-7 lg:gap-10 row-[2_/_3]"
+          >
+            <h2
+              class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold"
+            >
+              Aldrin COX Visa Services
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Laoreet donec sem nunc
+              dictumst duis. Amet sem eget convallis consectetur. Porta quam
+              massa maecenas id ultrices mattis. Tellus tristique sapien
+            </p>
           </div>
         </div>
       </section>
-
-      <!-- <section class="homeAbout bg-secondary py-10 lg:py-20">
-        <div class="container">
-          <h3 class="line-text text-center">About Us</h3>
-          <div class="homeAbout__wrapper flex justify-center items-center max-w-[1000px] mx-auto gap-20 mt-10">
-            <img src="../img/profile.png" class="w-72" alt="" />
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Laoreet donec sem nunc
-                dictumst duis. Amet sem eget convallis consectetur. Porta quam
-                massa maecenas id ultrices mattis. Tellus tristique sapien
-              </p>
-              <br>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Laoreet donec sem nunc
-                dictumst duis. Amet sem eget convallis consectetur. Porta quam
-                massa maecenas id ultrices mattis. Tellus tristique sapien
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> -->
 
       <!-- GALLERY -->
       <section class="homeGallery py-10 lg:py-20">
@@ -525,58 +453,58 @@
             >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="../img/gallery1.png" />
+                  <img src="../img/gallery1.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery2.png" />
+                  <img src="../img/gallery2.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery3.png" />
+                  <img src="../img/gallery3.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery4.png" />
+                  <img src="../img/gallery4.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery1.png" />
+                  <img src="../img/gallery1.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery2.png" />
+                  <img src="../img/gallery2.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery3.png" />
+                  <img src="../img/gallery3.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery4.png" />
+                  <img src="../img/gallery4.png" alt=""/>
                 </div>
               </div>
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
             </div>
-            <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="../img/gallery1.png" />
+                  <img src="../img/gallery1.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery2.png" />
+                  <img src="../img/gallery2.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery3.png" />
+                  <img src="../img/gallery3.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery4.png" />
+                  <img src="../img/gallery4.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery1.png" />
+                  <img src="../img/gallery1.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery2.png" />
+                  <img src="../img/gallery2.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery3.png" />
+                  <img src="../img/gallery3.png" alt=""/>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../img/gallery4.png" />
+                  <img src="../img/gallery4.png" alt=""/>
                 </div>
               </div>
             </div>
@@ -593,11 +521,11 @@
         <div
           class="CTA__wrapper grid justify-items-center items-center gap-1 lg:gap-2"
         >
-          <span
+          <h3
             class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold"
           >
             Live your American dream!
-          </span>
+          </h3>
           <p>Lorem ipsum dolor sit amet consectetur.</p>
           <a class="btn bg-prmry mt-3 lg:mt-10" href="">Inquire Now</a>
         </div>
