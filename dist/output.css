@@ -2660,21 +2660,6 @@ header{
   text-shadow: -3px 5px 9px rgb(0 0 0 / 100%);
 }
 
-.hover\:border-primary:hover{
-  --tw-border-opacity: 1;
-  border-color: rgb(187 20 27 / var(--tw-border-opacity));
-}
-
-.hover\:bg-white:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.hover\:text-primary:hover{
-  --tw-text-opacity: 1;
-  color: rgb(187 20 27 / var(--tw-text-opacity));
-}
-
 .hover\:underline:hover{
   text-decoration-line: underline;
 }
@@ -2984,6 +2969,21 @@ header{
 
   .lg\:leading-\[85px\]{
     line-height: 85px;
+  }
+
+  .lg\:hover\:border-primary:hover{
+    --tw-border-opacity: 1;
+    border-color: rgb(187 20 27 / var(--tw-border-opacity));
+  }
+
+  .lg\:hover\:bg-white:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .lg\:hover\:text-primary:hover{
+    --tw-text-opacity: 1;
+    color: rgb(187 20 27 / var(--tw-text-opacity));
   }
 }
 
